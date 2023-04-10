@@ -38,8 +38,8 @@
 | ------------| ---------- | ------------------------------ |
 | start_time  | string     | null:false                     |
 | condition   | boolean    |                                |
-| important   | text       |                                |
-| title       | boolean    | null:false                     |
+| important   | boolean    |                                |
+| title       | integer    | null:false                     |
 | content     | text       |                                |
 | user        | references | null:false, foreign key :true  |
 | cat         | references | null:false, foreign key :true  |
