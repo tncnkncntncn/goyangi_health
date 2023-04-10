@@ -20,11 +20,12 @@
 | ------------- | ---------- | ------------------------------ |
 | name          | string     | null:false                     |
 | gender        | boolean    |                                |
-| type          | string      |                               |
+| type          | string     |                                |
 | castration    | boolean    | null:false                     |
 | cat_weight    | integer    |                                |
 | birth_day     | date       |                                |
 | family_day    | date       |                                |
+| hospital      | string     |                                |
 | user          | references | null: false, foreign_key: true |
 
 - belongs_to:user
@@ -40,8 +41,8 @@
 | important   | text       |                                |
 | title       | boolean    | null:false                     |
 | content     | text       |                                |
-| user        | references | null:false, foreign key :true   |
-| cat         | references | null:false, foreign key :true   |
+| user        | references | null:false, foreign key :true  |
+| cat         | references | null:false, foreign key :true  |
 
 - belongs_to :user
 - belongs_to :cat
