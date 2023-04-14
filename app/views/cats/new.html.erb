@@ -1,0 +1,33 @@
+<%= form_with model: @cat,local: true do |f| %>
+  <%= f.label :猫ちゃんのお名前 %>
+  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.label :性別 %>
+  <%= f.radio_button :gender, true %>
+  <%= f.label :男の子 %>
+  <%= f.radio_button :gender, false %>
+  <%= f.label :女の子 %>
+
+  <%= f.label :猫ちゃんの種類 %>
+  <%= f.text_field :type, class: 'form-control' %>
+
+  <%= f.label :去勢の済、未済%>
+  <%= f.radio_button :castration, true %>
+  <%= f.label :去勢した %>
+  <%= f.radio_button :castration, false %>
+  <%= f.label :去勢していない %>
+
+  <%= f.label :体重 %>
+  <%= f.text_field :cat_weight, class: 'form-control' %>
+
+  <%= f.label :お誕生日 %>
+  <%= f.date_field :birth_day, class: 'form-control' %>
+
+  <%= f.label :家族になった日 %>
+  <%= f.date_field :family_day, class: 'form-control' %>
+
+  <%= f.label :行きつけの病院 %>
+  <%= f.text_field :hospital, class: 'form-control' %>
+
+  <%= f.submit "猫ちゃんを登録する", class: "btn btn-primary" %>
+<% end %>
