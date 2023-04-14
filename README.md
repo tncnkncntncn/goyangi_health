@@ -20,7 +20,7 @@
 | ------------- | ---------- | ------------------------------ |
 | name          | string     | null:false                     |
 | gender        | boolean    |                                |
-| type          | string     |                                |
+| cat_type          | string     |                                |
 | castration    | boolean    | null:false                     |
 | cat_weight    | integer    |                                |
 | birth_day     | date       |                                |

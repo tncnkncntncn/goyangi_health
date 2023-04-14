@@ -1,15 +1,86 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/*ヘッダー*/
+
+.top-page-header {
+  background-color: #f2f2f2;
+  height: 70px;
+  width: 100%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.header-bar a {
+  font-size: 24px;
+  color: #333;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.header-bar a:hover {
+  color: #de78e000;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lists-right {
+  list-style: none;
+  display: flex;
+}
+
+.lists-right li {
+  margin-right: 10px;
+}
+
+.user-nickname {
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.user-nickname:hover {
+  color: #611d18;
+}
+
+.logout {
+  background-color:#DEB887;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  margin-right: 20px;
+}
+
+.logout:hover {
+  background-color: #ffffff;
+  color: #cb68bc;
+  border: 1px solid #da73b6;
+}
+/*ヘッダー*/
+
+/*フッター*/
+.footer {
+  background-color: #fff;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+}
+
+.footer img {
+  height: 30px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/*フッター*/

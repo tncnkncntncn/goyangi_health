@@ -5,7 +5,7 @@ class CreateCats < ActiveRecord::Migration[6.0]
       t.timestamps              
       t.string :name         ,null:false, default: ""
       t.boolean :gender      
-      t.string :type         ,default: ""
+      t.string :cat_type         ,default: ""
       t.boolean :castration
       t.integer :cat_weight  ,default: ""
       t.date :birth_day

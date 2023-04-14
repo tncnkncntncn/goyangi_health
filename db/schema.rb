@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2023_04_14_063915) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name", default: "", null: false
     t.boolean "gender"
-    t.string "type", default: ""
+    t.string "cat_type", default: ""
     t.boolean "castration"
     t.integer "cat_weight"
     t.date "birth_day"
