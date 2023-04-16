@@ -115,3 +115,95 @@ form {
 
 /*フォーム*/
 
+/*ユーザー登録フォーム*/
+/* フォームのスタイル */
+.field {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ea8b0f;
+}
+
+.btn-primary {
+  background-color: #DEB887;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.mx-auto{
+  display: flex;
+  justify-content: center;
+}
+.user-new{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background-color: #d6742e;
+}
+
+/* エラーメッセージのスタイル */
+.field_with_errors label {
+  color: #f00;
+  font-weight: bold;
+}
+
+.field_with_errors input[type="text"],
+.field_with_errors input[type="email"],
+.field_with_errors input[type="password"],
+.field_with_errors textarea {
+  border-color: #f00;
+}
+
+.field_with_errors .form-control-feedback {
+  color: #f00;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* リンクのスタイル */
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  color: #1e87f0;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+
+
+/*ユーザー登録フォーム*/
