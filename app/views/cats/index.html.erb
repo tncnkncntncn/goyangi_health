@@ -7,9 +7,9 @@
     <% current_user.cats.each do |cat| %>
       <div class="cat-info">
        <%= image_tag cat.image.variant(resize: '300x300'), class: 'cat-image' if cat.image.attached? %>
-        <p><%= cat.name %></p>
-        <p><%= cat.birth_day %></p>
-        <p><%= cat.family_day %></p>
+        <p>お名前：<%= cat.name %></p>
+        <p>お誕生日：<%= cat.birth_day %></p>
+        <p>家族になった日：<%= cat.family_day %></p>
       </div>
     <% end %>
   <% else %>
