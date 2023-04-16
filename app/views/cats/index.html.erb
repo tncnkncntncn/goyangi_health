@@ -1,22 +1,37 @@
 <%= render "shared/header" %>
 
-<div class="">
-<div class="container">
-  <div class="text-center mb-5">Goyangi Healthは</div>
-  <div class="text-center mb-4">猫の情報を登録し、簡単に健康管理</div>
-  <div class="text-center mb-5">猫の健康管理は、Goyangi Healthで簡単に！</div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <div class="text-center">Goyangi Healthは、猫の情報を登録し、健康管理を簡単にするアプリです。カレンダー機能により、<br />日々の健康状態や病院予定を管理でき、健康に関する記録も残せます。また、画像をアップロードできるので、猫の成長や病気の変化なども簡単に記録できます。</p>
+<% if user_signed_in? %>
+ <%= link_to '新たに猫ちゃんを登録する',new_cat_path, class: "cat-new" %>
+  <% if @cat.present? %>
+   <h2>猫ちゃん一覧</h2>
+    <% current_user.cats.each do |cat| %>
+      <div class="cat-info">
+       <%= image_tag cat.image.variant(resize: '300x300'), class: 'cat-image' if cat.image.attached? %>
+        <p><%= cat.name %></p>
+        <p><%= cat.birth_day %></p>
+        <p><%= cat.family_day %></p>
+      </div>
+    <% end %>
+  <% else %>
+    <div class="top-list">
+      <ul class="top-list-contents">
+        Goyangi Healthは
+        <li class="text-center mb-4">猫の情報を登録し、簡単に健康管理</li>
+        <li class="text-center mb-5">猫の健康管理は、Goyangi Healthで簡単に！</li>
+      </ul>
     </div>
-  </div>
-</div>
 
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="text-center">Goyangi Healthは、猫の情報を登録し、健康管理を簡単にするアプリです。カレンダー機能により、<br />日々の健康状態や病院予定を管理でき、健康に関する記録も残せます。また、画像をアップロードできるので、猫の成長や病気の変化なども簡単に記録できます。</div>
+      </div>
+    </div>
 
-
-
-
+    <div class="user-in">
+      <%= link_to 'ログイン',new_user_session_path, class: "login" %>
+      <%= link_to '新規登録',new_user_registration_path, class: "sign-up" %>
+    </div>
+  <% end %>
+<% end %>
 
 <%= render "shared/footer" %>

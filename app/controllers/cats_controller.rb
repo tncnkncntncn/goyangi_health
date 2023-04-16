@@ -1,4 +1,5 @@
 class CatsController < ApplicationController
+
   def index
     @cat = Cat.all
   end
@@ -14,7 +15,7 @@ class CatsController < ApplicationController
       render :new
     end
   end
-  
+
 
   private
 

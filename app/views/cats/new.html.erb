@@ -1,39 +1,67 @@
+<%= render "shared/header" %>
 
-<%= form_with model: @cat,local: true do |f| %>
+<%= form_with model: @cat, local: true, html: { class: "form-container" } do |f| %>
+
  <%= render 'shared/error_messages', model: f.object %>
+  
   <p>
-  猫ちゃんの写真をクリックしてファイルをアップロード
+  クリックして猫ちゃんの写真ファイルをアップロード
   </p>
- <%= f.file_field :image, id:"item-image" %>
+  
+   <div class="form-group">
+ <%= f.file_field :image, id:"item-image", class: 'form-control' %>
+ </div>
+  <div class="form-group">
+  
   <%= f.label :猫ちゃんのお名前 %>
   <%= f.text_field :name, class: 'form-control' %>
-
+    </div>
+  
+     <div class="form-group">
   <%= f.label :性別 %>
-  <%= f.radio_button :gender, true %>
+  <%= f.radio_button :gender, true ,class: 'form-control' %>
   <%= f.label :男の子 %>
-  <%= f.radio_button :gender, false %>
+  <%= f.radio_button :gender, false , class: 'form-control'%>
   <%= f.label :女の子 %>
-
+    </div>
+  
+     <div class="form-group">
   <%= f.label :猫ちゃんの種類 %>
   <%= f.text_field :type, class: 'form-control' %>
-
+    </div>
+  
+     <div class="form-group">
   <%= f.label :去勢の済、未済%>
-  <%= f.radio_button :castration, true %>
+  <%= f.radio_button :castration, true , class: 'form-control'%>
   <%= f.label :去勢した %>
-  <%= f.radio_button :castration, false %>
+  <%= f.radio_button :castration, false , class: 'form-control' %>
   <%= f.label :去勢していない %>
-
+    </div>
+  
+     <div class="form-group">
   <%= f.label :体重 %>
   <%= f.text_field :cat_weight, class: 'form-control' %>
-
+    </div>
+  
+     <div class="form-group">
   <%= f.label :お誕生日 %>
   <%= f.date_field :birth_day, class: 'form-control' %>
-
+    </div>
+  
+     <div class="form-group">
   <%= f.label :家族になった日 %>
   <%= f.date_field :family_day, class: 'form-control' %>
-
+    </div>
+  
+     <div class="form-group">
   <%= f.label :行きつけの病院 %>
   <%= f.text_field :hospital, class: 'form-control' %>
-
+    </div>
+  
+     <div class="form-group">
   <%= f.submit "猫ちゃんを登録する", class: "btn btn-primary" %>
+      </div>
+
 <% end %>
+
+<%= render "shared/footer" %>

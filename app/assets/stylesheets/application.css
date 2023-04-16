@@ -60,9 +60,10 @@
 
 .logout:hover {
   background-color: #ffffff;
-  color: #cb68bc;
-  border: 1px solid #da73b6;
+  color: #DEB887;
+  border: 1px solid #d6742e;
 }
+
 /*ヘッダー*/
 
 /*フッター*/
@@ -84,3 +85,33 @@
 }
 
 /*フッター*/
+
+/*フォーム*/
+form {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-control {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.btn{
+  height: 50px;
+  width: 180px;
+}
+
+/*フォーム*/
+
